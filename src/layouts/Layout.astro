@@ -59,11 +59,11 @@ const { description, title } = Astro.props;
           })();
         },
 
-        isDark: false,
+        isDark: true,
 
         toggle() {
           this.isDark = !this.isDark;
-          localStorage.setItem('theme', this.isDark ? 'dark' : 'light');
+          localStorage.setItem('theme', 'dark');
         },
       });
 
