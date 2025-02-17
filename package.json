@@ -1,25 +1,27 @@
 {
-  "name": "astro-theme-stone",
-  "type": "module",
-  "version": "1.0.0",
+  "name": "altoland-next",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "@alpinejs/collapse": "3.12.3",
-    "@astrojs/tailwind": "^6.0.0",
-    "@fontsource/inter": "5.0.8",
-    "@types/alpinejs": "3.7.2",
-    "alpinejs": "3.12.3",
-    "astro": "^5.2.5",
-    "astro-compress": "^2.3.6",
-    "prettier": "3.0.2",
-    "prettier-plugin-astro": "0.12.0",
-    "prettier-plugin-tailwindcss": "0.5.3",
-    "tailwindcss": "3.3.3"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "next": "15.1.7"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "eslint": "^9",
+    "eslint-config-next": "15.1.7",
+    "@eslint/eslintrc": "^3"
   }
 }
