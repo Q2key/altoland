@@ -1,6 +1,24 @@
 /** @type {import('tailwindcss').Config} */
 
-const colors = require('tailwindcss/colors');
+
+const alto = {
+  '50': '#fff1f2',
+  '100': '#ffe4e6',
+  '200': '#fecdd3',
+  '300': '#fda4af',
+  '400': '#fb7185',
+  '500': '#f43f5e',
+  '600': '#e11d48',
+  '700': '#be123c',
+  '800': '#9f1239',
+  '900': '#881337',
+  '950': '#4c0519',
+
+  'creme': '#FFFAE5',
+  'azure': '#CCDBDC',
+  'brown': '#250902',
+}
+
 
 module.exports = {
   darkMode: 'class',
@@ -10,10 +28,12 @@ module.exports = {
       current: 'currentColor',
       transparent: 'transparent',
       white: '#ffffff',
-      primary: colors.rose,
+      primary: alto,
     },
     fontFamily: {
-      sans: ['Benzin', 'sans-serif'],
+      //decorativ: ['Benzin'],
+      benz: ['Benzin'],
+      sans: ['Benzin', 'sans-serif'], // Capital B
     },
     fontSize: {
       xs: ['0.75rem', '1rem'],

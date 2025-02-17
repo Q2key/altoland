@@ -13,11 +13,15 @@ interface Props {
 const { description, title } = Astro.props;
 ---
 
-<!DOCTYPE html>
-<html lang="en" x-cloak x-data :class="{ 'dark': $store.theme.isDark }">
+<!doctype html>
+<html lang="en" x-cloak x-data :class="{ 'dark': true }">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Benzin:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -28,7 +32,7 @@ const { description, title } = Astro.props;
     <ViewTransitions />
   </head>
   <body
-    class="bg-primary-50 text-primary-950 dark:bg-primary-950 dark:text-primary-200 antialiased transition"
+    class="bg-primary-50 text-primary-950 antialiased transition dark:bg-primary-950 dark:text-primary-200"
   >
     <Header />
     <main>
@@ -39,6 +43,13 @@ const { description, title } = Astro.props;
       [x-cloak] {
         display: none !important;
       }
+      @font-face {
+        font-family: 'Benzin';
+        src: url('/fonts/Benzin-Regular.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
     </style>
     <script>
       import Alpine from 'alpinejs';
@@ -48,15 +59,7 @@ const { description, title } = Astro.props;
 
       Alpine.store('theme', {
         init() {
-          this.isDark = (() => {
-            if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-              return localStorage.getItem('theme') === 'dark';
-            }
-            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-              return true;
-            }
-            return false;
-          })();
+          this.isDark = true;
         },
 
         isDark: true,
