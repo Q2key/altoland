@@ -1,3 +1,8 @@
+---
+import ImageCorousel from './ImageCorousel.astro';
+
+---
+
 <section class="py-16 sm:py-20 bg-primary">
   <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
     <div class="flex flex-col gap-16">
@@ -17,12 +22,7 @@
           Записаться на мастер-класс
         </a>
       </div>
-      <img
-        class="h-auto w-full rounded-3xl"
-        width="1280"
-        height="640"
-        src="/assets/hero.webp"
-        alt="Hero picture"
+      <ImageCorousel class="h-auto w-full rounded-3xl"
       />
     </div>
   </div>
