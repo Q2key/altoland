@@ -1,5 +1,13 @@
 ---
-const images = ['/assets/hero.webp', '/assets/hero.webp', '/assets/hero.webp'];
+const images = [
+  '/assets/h1.jpg', 
+  '/assets/h2.jpg', 
+  '/assets/h3.jpg', 
+  '/assets/h4.jpg', 
+  '/assets/h5.jpg', 
+  '/assets/h6.jpg', 
+
+  ];
 ---
 
 <div class="relative w-full">
@@ -8,7 +16,7 @@ const images = ['/assets/hero.webp', '/assets/hero.webp', '/assets/hero.webp'];
     <div
       id="carousel"
       class="flex transition-transform duration-500 ease-in-out"
-      style="width: 300%"
+      style="width: 600%"
     >
       {
         images.map((image) => (
@@ -28,8 +36,8 @@ const images = ['/assets/hero.webp', '/assets/hero.webp', '/assets/hero.webp'];
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       fill="none"
-      stroke="currentColor"
-      stroke-width="2"
+      stroke="brown"
+      stroke-width="3"
       stroke-linecap="round"
       stroke-linejoin="round"
     >
@@ -47,8 +55,8 @@ const images = ['/assets/hero.webp', '/assets/hero.webp', '/assets/hero.webp'];
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       fill="none"
-      stroke="currentColor"
-      stroke-width="2"
+      stroke="brown"
+      stroke-width="3"
       stroke-linecap="round"
       stroke-linejoin="round"
     >
@@ -61,7 +69,7 @@ const images = ['/assets/hero.webp', '/assets/hero.webp', '/assets/hero.webp'];
   const carousel = document.getElementById('carousel');
   const prevBtn = document.getElementById('prev');
   const nextBtn = document.getElementById('next');
-  const totalImages = 3;
+  const totalImages = 6;
   let currentIndex = 0;
 
   // Move to the previous image
