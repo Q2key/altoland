@@ -24,8 +24,11 @@ const { description, title } = Astro.props;
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
-    <meta name="generator" content={Astro.generator} />
-    <meta name="description" content={description} />
+    <meta property="og:title" content="Your Site Title" />
+    <meta property="og:description" content="Мастер-класс по 3D вузаулизации от Алисы Тоцкой" />
+    <meta property="og:image" content="/assets/hero.png" />
+    <meta property="og:url" content="https://altoland.vercel.app" />
+    <meta property="og:type" content="website" />
     <title>{title}</title>
     <ViewTransitions />
   </head>
